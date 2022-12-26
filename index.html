@@ -216,6 +216,13 @@
 
     const players = [player, player2, player3, player4, player5];
 
+
+    players.map((p, i) => {
+        p.on('play', () => {
+            console.log(p.nowplay)
+        })
+    })
+
     const pauseAllExceptI = function (players, index) {
         players.map((p, i) => {
             if (i !== index) {
